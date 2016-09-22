@@ -14,8 +14,28 @@
         android:layout_height="wrap_content"
         android:text="Iniciar"
         android:id="@+id/bt_Iniciar"
+        android:onClick="inicia"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/ic_alarm"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:onClick="inicia"/>
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parar"
+        android:id="@+id/bt_Parar"
+        android:layout_below="@+id/bt_Iniciar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        android:onClick="encerra"/>
+
 </RelativeLayout>
