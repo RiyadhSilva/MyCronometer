@@ -12,7 +12,7 @@ public class HelloIntentService extends IntentService {
         super("NomeDaThreadAqui");
     }
 
-    private static final int MAX = 10;
+    private static final int MAX = 30;
     private static final String TAG = "livro";
     private boolean running;
 
@@ -45,5 +45,14 @@ public class HelloIntentService extends IntentService {
         //Ao encerrar o servico, altera a flag para a thread parar
         running = false;
         Log.d(TAG, "ExemploServico.onDestroy()");
+        notificacao("MyCronometer", "Fim do tempo!");
+    }
+
+    private void notificacao(String cTitle, String cText) {
+        int id = 1;
+        String contentTitle = cTitle;
+        String contentText = cText;
+        Intent intent = new Intent(this, MainActivity.class);
+        NotificationUtil.create(this, intent, contentTitle, contentText, id);
     }
 }
